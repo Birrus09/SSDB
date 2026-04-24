@@ -15,7 +15,7 @@ def dirbust(url, wordlist, options = [200, 301, 302], cookies = None, headers = 
                         print(f'{full_url}: {res.status_code})')
     except FileNotFoundError:
         print(f"File not found: {wordlist}")
-        print("defaulting to directory-list-2.3-big.txt")
-        dirbust(url, "wordlists/directory-list-2.3-big.txt", options, cookies, headers, report)
+        print("defaulting to big.txt")
+        dirbust(url, "wordlists/big.txt", options, cookies, headers, report)
     except Exception as e:
         print(f"An error occurred: {e}")
